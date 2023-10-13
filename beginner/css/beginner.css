@@ -1,0 +1,98 @@
+@charset "utf-8";
+main {
+	color: #fff;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+h1 {
+	font-size: 7.0rem;
+	border-bottom: 2px solid #fff;
+	margin:100px 0;
+	margin-left:20%;
+}
+h1 span {
+	font-size: 1.6rem;
+	padding: 10px;
+}
+h2 {
+	font-size: 4.0rem;
+	text-align: center;
+}
+dl {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	top: -10px;
+	margin-bottom: 50px;
+}
+dd span {
+	font-size: 3rem;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+dd {
+	font-size: 2.4rem;
+	line-height: 1.5em;
+}
+.no {
+	width: 15%;
+	height: auto;
+}
+.text {
+	width: 80%;
+	height: auto;
+}
+.bn {
+	position: relative;
+}
+}
+@media screen and (max-width:1200px) {
+	.no {
+		width: 20%;
+		height: auto;
+	}
+	.text {
+		width: 70%;
+		height: auto;
+	}
+}
+@media screen and (max-width:760px) {
+	.bn {
+		padding: 50px 0;
+	}
+	h1 {
+		font-size: 6.0rem;
+	}
+	h2 {
+		font-size: 3.0rem;
+	}
+	dl {
+		justify-content: space-around;
+	}
+	dd span {
+		font-size: 2.4rem;
+	}
+	dd {
+		font-size: 1.8rem;
+	}
+}
+@media screen and (max-width:550px) {
+	h1 {
+		font-size: 3.5rem;
+		margin-left:10%;
+	}
+	h1 span {
+		font-size: 1.4rem;
+	}
+	h2 {
+		font-size: 3.0rem;
+	}
+	dd span {
+		font-size: 2.4rem;
+	}
+	dd {
+		font-size: 1.8rem;
+	}
+
+}

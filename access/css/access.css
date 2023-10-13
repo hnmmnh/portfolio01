@@ -1,0 +1,106 @@
+@charset "utf-8";
+main {
+	color: #fff;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+h1 {
+	font-size: 7.0rem;
+	border-bottom: 2px solid #fff;
+	margin:100px 0;
+	margin-left:20%;
+}
+h1 span {
+	font-size: 1.6rem;
+	padding: 10px;
+}
+.map {
+	padding: 100px;
+}
+.mapimg {
+	width: 100%;
+}
+dl{
+padding: 50px 100px;
+}
+dt {
+	font-size: 3.0rem;
+}
+
+dd {
+	font-size: 2.0rem;
+	padding-top: 20px;
+}
+.t {
+	position: relative;
+}
+.t::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url(../images/t.svg);
+	left: -70px;
+	transform: translateY(-50%);
+	width: 2em;
+	height: 2em;
+}
+.c {
+	position: relative;
+}
+.c::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url(../images/c.svg);
+	left: -70px;
+	transform: translateY(-50%);
+	width: 2em;
+	height: 2em;
+}
+
+@media screen and (max-width:760px) {
+	h1 {
+		font-size: 4.0rem;
+		margin: 50px 0;
+		margin-left:20%;
+	}
+	.map{
+		padding: 50px;
+	}
+	dt {
+		font-size: 2.4rem;
+	}
+
+	dd {
+		font-size: 1.8rem;
+	}
+}
+@media screen and (max-width:550px) {
+		.map{
+		padding: 0;
+	}
+	dl{
+		padding: 60px
+	}
+	dt {
+		font-size: 1.8rem;
+	}
+
+	dd {
+		font-size: 1.6rem;
+		padding-top: 10px;
+	}
+	.t::before {
+		left: -40px;
+	}
+	.c::before {
+		left: -40px;
+	}
+}

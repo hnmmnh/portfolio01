@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+body {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: #253080;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.font {
+	font-family: 'Audiowide', cursive;
+}
+header{
+	max-width: 1920px;
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	background: #eee;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	padding: 0 20px;
+	background: #ff330c;
+}
+header img {
+	width: 100%;
+	max-width: 1920px;
+}
+.logo {
+	width: 100%;
+	max-width: 1920px;
+}
+footer {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: #eee;
+	padding: 20px 0;
+	padding-right: 70px;
+	background: #ff330c;
+	}
+	footer ul li a {
+	font-size: 2.0rem;
+	line-height: 2.0em;
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 2px solid transparent;
+	transition: border-color .25s;
+	font-weight: bold;
+	}
+	footer a:hover {
+		border-bottom: 2px solid #fff;
+	}
+	footer nav ul {
+		display: block;
+	}
+	footer nav ul li {
+		text-align: left;
+	}
+	footer nav {
+	padding-left: 100px;
+	}
+	.footerWrapper {
+	display: flex;
+	justify-content: space-between;
+	}
+	.info {
+	display: flex;
+	line-height: 1.6em;
+	font-size: 2.0rem;
+	color: #fff;
+	}
+	.info p {
+	padding-right: 30px;
+	}
+	.copy{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 1.4rem;
+	color: #fff;
+	}
+
+/*--- navigation ---*/
+
+#menu-btn-check{
+	display:none;
+}
+header nav ul{
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: no-wrap;
+}
+header nav ul li{
+	text-align: center;
+	margin-right: 15px;
+	height:40px;
+	line-height: 40px;
+}
+header nav ul li:last-child{
+	margin-right: 0;
+}
+header nav ul li a{
+	font-size: 2.0rem;
+	border-bottom: 2px solid transparent;
+	transition: border-color .25s;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+}
+header nav ul li a:hover {
+	border-bottom: 2px solid #fff;
+}
+.btnX{
+	visibility: hidden;
+}
+header nav ul li span {
+	display: none;
+}
+/*--- ハンバーガーメニュー ---*/
+.menu-btn{
+	display:none;
+}
+
+/*--- レスポンシブ---------------------------------------- ---*/
+
+@media screen and (max-width:950px) {
+	.header-logo{
+		width:50%;
+		height:auto;
+		line-height:60px;
+	}
+
+	header nav ul li a{
+		font-size: 1.8rem;
+	}
+	.info {
+	display: flex;
+	line-height: 1.6em;
+	font-size: 1.8rem;
+	}
+	.info p {
+		padding-right: 20px;
+	}
+		footer {
+		padding: 20px;
+	}
+	footer nav {
+		padding: 0;
+	}
+}
+@media screen and (max-width:760px) {
+	header nav ul li a{
+		font-size: 1.5rem;
+	}
+	.info {
+		display: flex;
+		line-height: 1.6em;
+		font-size: 1.4rem;
+	}
+	footer ul li a {
+		font-size: 1.6rem;
+	}
+}
+
+@media screen and (max-width:550px) {
+	header{
+		height: 60px;
+		padding: 0px 20px;
+	}
+	header img {
+	width: 70%;
+	height: auto;
+}
+/*---- ハンバーガーメニュー・ナビゲーションを画面外へ -----*/
+	header nav {
+		position:fixed;
+		top:0;
+		width:100%;
+		height:100%;
+		left: 100%;
+		transition: 0.5s ease-in-out;
+		z-index:998;
+	}
+	header nav ul{
+		display: block;
+		height:100%;
+		padding: 20px 0 0 20px;
+		background: #fff;
+		margin: 0 auto;
+	}
+	header nav ul li{
+		margin: 0;
+		text-align: left;
+		padding:30px 0;
+	}
+	header nav ul li a{
+		padding: 30px 20px 10px 20px;
+		font-size: 2.0rem;
+		text-decoration: none;
+		color: #ff330c;
+		border-bottom: 2px solid transparent;
+		transition: border-color .25s;
+		font-weight: bold;
+	}
+	header nav ul li span {
+		display: inline-block;
+		padding-left: 20px;
+		font-size: 1.6rem;
+	}
+	header nav ul li a:hover {
+		border-bottom: 2px solid #ff330c;
+	}
+/*---- ハンバーガーメニュー・ナビゲーションを画面内へ -----*/
+	#menu-btn-check:checked ~ nav{
+		top:0;
+		left:0;
+	}
+	#menu-btn-check:checked ~ .btn3{
+		visibility: hidden;
+	}
+	#menu-btn-check:checked ~ .btnX{
+		visibility: visible;
+	}
+	}
+	@media screen and (max-width:550px) {
+	.menu-btn{
+		display: block;
+	}
+	.menu-btn  img{
+		position:fixed;
+		top:13px;
+		right:20px;
+		z-index:999;
+		width: 40px;
+		height:auto;
+		cursor: pointer;
+	}
+	footer{
+		text-align: left;
+	}
+	.footerWrapper {
+		display: block;
+	}
+	.info {
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+	.info p {
+		padding: 0;
+		padding-top: 20px;
+		margin: 0;
+	}
+	footer p {
+		padding-top: 30px;
+	}
+	footer {
+		padding: 20px;
+	}
+	footer nav {
+		padding: 0;
+	}
+	.copy{
+		font-size: 1.2rem;
+	}
+	
+}
